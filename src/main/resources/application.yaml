@@ -6,11 +6,13 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: root
-    url: jdbc:mysql://localhost:3306/nrs
+    username: root2
+    password: 123456
+    url: jdbc:mysql://localhost:3306/test
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       initial-size: 5
       max-active: 10
-
+mybatis:
+  mapper-locations=classpath:mapper/*:
+    xml:UserMapper.xml

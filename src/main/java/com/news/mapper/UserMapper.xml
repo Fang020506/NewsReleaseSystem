@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- UserMapper.xml -->
 <mapper namespace="com.news.mapper.UserMapper">
-    <insert id="addUser" parameterType="com.example.entity.User">
+    <insert id="addUser" parameterType="com.news.entity.User">
         insert into user(name, password, age, role) values (#{name}, #{password}, #{age}, #{role})
     </insert>
 
@@ -20,8 +19,7 @@
     <select id="getUsersByLike" parameterType="String" resultType="com.news.entity.User">
         select * from user where name like CONCAT('%', #{keywords}, '%')
     </select>
-
-    <select id="getUserById" parameterType="int" resultType="com.news.entity.User">
+    <select id="getUserById" parameterType="int" resultType="com.example.entity.User">
         select * from user where id = #{id}
     </select>
 </mapper>
